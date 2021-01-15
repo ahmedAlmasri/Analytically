@@ -1,0 +1,43 @@
+{
+  "name": "Analytically",
+  "version": "0.1.0",
+  "summary": "A short description of Analytically.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/ahmedAlmasri/Analytically",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Ahmad Almasri": "ahmed.almasri@ymail.com"
+  },
+  "source": {
+    "git": "https://github.com/ahmedAlmasri/Analytically.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "default_subspecs": "Core",
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "Analytically/Classes/**/*"
+    },
+    {
+      "name": "Flurry",
+      "platforms": {
+        "ios": "9.0"
+      },
+      "source_files": "Analytically/Classes/Flurry/*",
+      "dependencies": {
+        "Analytically/Core": [
+
+        ],
+        "Flurry-iOS-SDK/FlurrySDK": [
+
+        ]
+      }
+    }
+  ]
+}
