@@ -9,10 +9,8 @@
 Pod::Spec.new do |s|
   s.name             = 'Analytically'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of Analytically.'
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.swift_version    = '5.0'
+  s.summary          = 'The Analytically tool to support may providers for Analyticas'
 
   s.homepage         = 'https://github.com/ahmedAlmasri/Analytically'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -26,7 +24,7 @@ TODO: Add long description of the pod here.
    end
   s.subspec 'Flurry' do |subspec|
       subspec.platform     = :ios, '9.0'
-      subspec.source_files = 'Analytically/Classes/Flurry/*'
+      subspec.source_files = 'Analytically/Classes/Flurry/**'
       subspec.dependency 'Analytically/Core'
       subspec.dependency "Flurry-iOS-SDK/FlurrySDK"
    end

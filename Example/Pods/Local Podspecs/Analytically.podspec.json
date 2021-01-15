@@ -1,8 +1,8 @@
 {
   "name": "Analytically",
   "version": "0.1.0",
-  "summary": "A short description of Analytically.",
-  "description": "TODO: Add long description of the pod here.",
+  "swift_versions": "5.0",
+  "summary": "The Analytically tool to support may providers for Analyticas",
   "homepage": "https://github.com/ahmedAlmasri/Analytically",
   "license": {
     "type": "MIT",
@@ -29,7 +29,7 @@
       "platforms": {
         "ios": "9.0"
       },
-      "source_files": "Analytically/Classes/Flurry/*",
+      "source_files": "Analytically/Classes/Flurry/**",
       "dependencies": {
         "Analytically/Core": [
 
@@ -39,5 +39,6 @@
         ]
       }
     }
-  ]
+  ],
+  "swift_version": "5.0"
 }

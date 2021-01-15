@@ -1,6 +1,4 @@
 PODS:
-  - Analytically (0.1.0):
-    - Analytically/Core (= 0.1.0)
   - Analytically/Core (0.1.0)
   - Analytically/Flurry (0.1.0):
     - Analytically/Core
@@ -8,7 +6,6 @@ PODS:
   - Flurry-iOS-SDK/FlurrySDK (11.2.0)
 
 DEPENDENCIES:
-  - Analytically (from `../`)
   - Analytically/Flurry (from `../`)
 
 SPEC REPOS:
@@ -20,9 +17,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Analytically: 68fe76fba74cab66c91b0f332b487a566f02dacb
+  Analytically: 6e22292b14a9cf2000244e57048ddfeb066f77ee
   Flurry-iOS-SDK: 6636d30c30f12010e7c7c71d84b443416a168efc
 
-PODFILE CHECKSUM: 647f637552547eb562d4885715a4ec742765c7b4
+PODFILE CHECKSUM: 37281f26b636271e468ef797a9d09c36d138c20a
 
 COCOAPODS: 1.9.3
