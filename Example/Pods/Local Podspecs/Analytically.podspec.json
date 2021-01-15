@@ -2,7 +2,7 @@
   "name": "Analytically",
   "version": "0.1.0",
   "swift_versions": "5.0",
-  "summary": "The Analytically tool to support may providers for Analyticas",
+  "summary": "The Analytically tool to support may providers for Analytics",
   "homepage": "https://github.com/ahmedAlmasri/Analytically",
   "license": {
     "type": "MIT",
@@ -26,17 +26,17 @@
     },
     {
       "name": "Flurry",
-      "platforms": {
-        "ios": "9.0"
-      },
-      "source_files": "Analytically/Classes/Flurry/**",
       "dependencies": {
-        "Analytically/Core": [
-
-        ],
         "Flurry-iOS-SDK/FlurrySDK": [
 
+        ],
+        "Analytically/Core": [
+
         ]
+      },
+      "source_files": "Analytically/Flurry/**/*",
+      "platforms": {
+        "ios": "9.0"
       }
     }
   ],

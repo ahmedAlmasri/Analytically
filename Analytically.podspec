@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.name             = 'Analytically'
   s.version          = '0.1.0'
   s.swift_version    = '5.0'
-  s.summary          = 'The Analytically tool to support may providers for Analyticas'
+  s.summary          = 'The Analytically tool to support may providers for Analytics'
 
   s.homepage         = 'https://github.com/ahmedAlmasri/Analytically'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -23,10 +23,10 @@ Pod::Spec.new do |s|
      core.source_files = 'Analytically/Classes/**/*'
    end
   s.subspec 'Flurry' do |subspec|
-      subspec.platform     = :ios, '9.0'
-      subspec.source_files = 'Analytically/Classes/Flurry/**'
-      subspec.dependency 'Analytically/Core'
       subspec.dependency "Flurry-iOS-SDK/FlurrySDK"
+      subspec.dependency 'Analytically/Core'
+      subspec.source_files = 'Analytically/Flurry/**/*'
+      subspec.platform     = :ios, '9.0'
    end
   s.default_subspec = 'Core'
 
