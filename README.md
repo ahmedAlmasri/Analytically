@@ -22,7 +22,7 @@ pod 'Analytically'
 
 ## Author
 
-ahmed.almasri@ymail.com, ahmed.almasri@ymail.com
+Ahmad Almasri, ahmed.almasri@ymail.com
 
 ## License
 
