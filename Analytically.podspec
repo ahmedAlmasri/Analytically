@@ -18,6 +18,8 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/ahmedAlmasri/Analytically.git', :tag => s.version.to_s }
   
   s.ios.deployment_target = '9.0'
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
   
   s.subspec 'Core' do |core|
      core.source_files = 'Analytically/Classes/**/*'
@@ -27,6 +29,8 @@ Pod::Spec.new do |s|
       subspec.dependency 'Analytically/Core'
       subspec.source_files = 'Analytically/Flurry/**/*'
       subspec.platform     = :ios, '9.0'
+      subspec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
+      subspec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
    end
   s.default_subspec = 'Core'
 

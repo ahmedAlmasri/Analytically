@@ -18,12 +18,16 @@ public final class AnalyticsService {
         providers.append(provider)
     }
 
-    public func log(event: Eventable) {
+    public func log(event: Eventable, timed: Bool = false) {
         providers.forEach {
-            $0.logEvent(name: event.name, parameters: event.parameters)
+            $0.logEvent(name: event.name, parameters: event.parameters, timed: timed)
         }
     }
-    
+    public func endTimedLog(event: Eventable) {
+        providers.forEach {
+            $0.endTimedEvent(name: event.name, parameters: event.parameters)
+        }
+    }
     public func error(_ caught: Caught) {
         providers.forEach {
             $0.logError(errorId: caught.errorId, message: caught.message, error: caught.error)

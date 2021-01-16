@@ -29,8 +29,12 @@ public class FlurryProvider: AnalyticsProvider, AnalyticsProfileProvider {
         Flurry.startSession(apiKey, with: sessionBuilder)
     }
     
-    public func logEvent(name: String, parameters: [String : Any]) {
-        Flurry.logEvent(name, withParameters: parameters)
+    public func logEvent(name: String, parameters: [String : Any], timed: Bool = false) {
+        Flurry.logEvent(name, withParameters: parameters, timed: timed)
+    }
+    
+    public func endTimedEvent(name: String, parameters: [String : Any]) {
+        Flurry.endTimedEvent(name, withParameters: parameters)
     }
     
     public func logError(errorId: String, message: String, error: Error) {

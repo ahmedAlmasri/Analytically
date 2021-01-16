@@ -46,7 +46,7 @@ enum MockEvents: Eventable {
 class MockProvider: AnalyticsProvider {
     var logEventCalled = false
     var logErrorCalled = false
-    func logEvent(name: String, parameters: [String : Any]) {
+    func logEvent(name: String, parameters: [String : Any], timed: Bool = false) {
         logEventCalled = true
     }
     

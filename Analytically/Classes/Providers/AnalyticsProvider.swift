@@ -12,11 +12,13 @@ public protocol AnalyticsProfileProvider {
     func setProfile(with user: User)
 }
 public protocol AnalyticsProvider {
-    func logEvent(name: String, parameters: [String: Any])
+    func logEvent(name: String, parameters: [String: Any], timed: Bool)
     func logError(errorId: String, message: String, error: Error)
+    func endTimedEvent(name: String, parameters: [String: Any])
    
 }
 
 extension AnalyticsProvider {
     func logError(errorId: String, message: String, error: Error) {}
+    public func endTimedEvent(name: String, parameters: [String: Any]) { }
 }
