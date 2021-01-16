@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol Analyticable {
+public protocol Analyticable {
     var service: AnalyticsService! { get set }
 }
