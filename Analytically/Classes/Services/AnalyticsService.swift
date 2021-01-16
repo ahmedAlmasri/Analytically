@@ -33,4 +33,7 @@ public final class AnalyticsService {
             $0.logError(errorId: caught.errorId, message: caught.message, error: caught.error)
         }
     }
+    public func enableAutoLogPageView() {
+        UIViewController.enableAutoLogPageView()
+    }
 }
