@@ -21,15 +21,15 @@ private var associatedObjectAddr = ""
 extension UIViewController {
     
     static func enableAutoLogPageView() {
-        swizzling(Self.self, #selector(Self.viewWillAppear(_:)), #selector(Self.proj_viewWillAppear(animated:)))
+        swizzling(Self.self, #selector(Self.viewDidLoad), #selector(Self.proj_viewDidLoad))
 
     }
 
-    @objc func proj_viewWillAppear(animated: Bool) {
-        self.proj_viewWillAppear(animated: animated)
+    @objc func proj_viewDidLoad() {
+        self.proj_viewDidLoad()
         
         let deallocator = Deallocator { [weak self] in
-            (self as? Analyticable)?.service.log(event: PageEvents.pageView("\(Self.self)"))
+            (self as? Analyticable)?.service.endTimedLog(event: PageEvents.pageView("\(Self.self)"))
         }
         
         objc_setAssociatedObject(self, &associatedObjectAddr, deallocator, .OBJC_ASSOCIATION_RETAIN)
